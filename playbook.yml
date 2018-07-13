@@ -1,0 +1,13 @@
+- hosts: foo
+  connection: local
+  become: false
+  roles:
+    - role: foo
+      vars:
+        node:
+          other: "dsa"
+    - role: bar
+      vars:
+        node:
+          other: "abc"
+          another: "foobar"
